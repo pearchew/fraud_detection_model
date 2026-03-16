@@ -29,5 +29,5 @@ The models were evaluated primarily on their ability to catch actual fraud (Reca
    `git clone https://github.com/yourusername/fraud-detection-model.git`
 2. Install the required dependencies:
    `pip install -r requirements.txt`
-3. Download the `creditcard.csv` dataset from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) and place it in a `data/` folder at the root of the project.
+3. Download the `creditcard.csv` dataset from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) and place it at the root of the project.
 4. Run the Jupyter Notebook `01_fraud_detection.ipynb` from top to bottom.
