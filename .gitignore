@@ -4,6 +4,7 @@ data/
 *.joblib
 
 *.Rhistory
+.zip
 
 # Ignore the virtual environment
 .venv/
