@@ -1,15 +1,15 @@
-# Goal 
+# WIP Goal 
 
 ## Phase 1: Algorithmic Advancements (The "Brain")
 - Transition to Graph Networks for AML: Fraudsters often move money through complex networks to obscure its origin. You should explore datasets like the Elliptic Data Set (Bitcoin transactions) or PaySim (mobile money). Apply Graph Neural Networks (GNNs) or extract network-based features (e.g., PageRank, in-degree/out-degree velocity) to feed into your XGBoost/LightGBM models.
 - Explainable AI (XAI): Financial regulators (like the FCA in the UK) require that automated decisions be explainable. You cannot just block a transaction without a reason. Integrate SHAP (SHapley Additive exPlanations) or LIME into your pipeline. This will break down exactly which features (e.g., Time, Amount, or a specific PCA feature) pushed the model's probability score over your 0.50 threshold.
 **WIP: Sequential/Time-Series Analysis: A user swiping their card in London and then in Tokyo 10 minutes later is a massive red flag. Implement features that capture the velocity of transactions (e.g., "amount spent in the last 1 hour").**
 
-Phase 2: MLOps and Engineering (The "Muscles")
+## Phase 2: MLOps and Engineering (The "Muscles")
 - API Deployment: Wrap your serialized best_fraud_model.joblib and robust_scaler.joblib in a FastAPI or Flask application. The API should receive a transaction payload, transform the Amount and Time using the loaded scaler, pass it to the model, and return a JSON response with the fraud probability.
 - Concept Drift Monitoring: Fraudsters change their tactics. Use tools like Evidently AI or Prometheus/Grafana to monitor the incoming data distribution and model performance over time to detect when the model needs retraining.
 
-Phase 3: The Proposed Product Vision (The "Face")
+## Phase 3: The Proposed Product Vision (The "Face")
 What the product looks like:
 - The User: A human Fraud Analyst or AML Investigator at a bank (e.g., Monzo, Revolut).
 - The Interface: A web dashboard built using Streamlit, Dash, or React.
