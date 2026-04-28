@@ -1,7 +1,5 @@
 # Ignore the massive dataset
 data/
-*.csv
-*.joblib
 
 *.Rhistory
 *.zip
