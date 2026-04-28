@@ -3,7 +3,12 @@
 # Uvicorn: The actual "server" engine that will run your FastAPI code and listen for internet traffic.
 # Pydantic: A data validation tool. If a bank accidentally sends text (like "one thousand") 
     # instead of a number for the transaction amount, Pydantic will catch the error and stop the API from crashing.
-    
+
+# activate with this -> uvicorn api:app --reload
+# api refers to the name of your file (api.py).
+# app refers to the app = FastAPI(...) variable you created inside the file.
+# --reload tells the server to automatically update if you save changes to your code.
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import joblib
